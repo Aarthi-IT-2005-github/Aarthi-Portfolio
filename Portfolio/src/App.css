@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* --------- BASE STYLES --------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #1c1c1c, #2e2e2e);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------- GENERAL ANIMATIONS --------- */
+.fade-in,
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-in {
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-left {
+  animation: slideLeft 1.5s ease;
+}
+.animate-slide-right {
+  animation: slideRight 1.5s ease;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation: typing 2.5s steps(30, end) 1, blink 0.75s step-end infinite;
+  width: 100%;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* --------- HOME SECTION --------- */
+.home-section {
+  background: linear-gradient(to right, #24243d, #31222b);
+  min-height: 100vh;
+  padding-top: 60px;
+  transition: all 0.5s ease-in-out;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ae57d9, #b91d73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-highlight {
+  color: #ffd700;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* --------- SOCIAL ICONS --------- */
+.icon-button {
+  display: inline-block;
+  color: white;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* --------- BUTTONS --------- */
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* --------- ABOUT SECTION --------- */
+.about-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #7d6037, #343a40);
+  transition: all 0.4s ease;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+.profile-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.profile-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* --------- SKILLS SECTION --------- */
+.skills-section {
+  background: linear-gradient(to bottom, #373b3f, #4f3f5c);
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.skill-card {
+  background: #ffffff;
+  color: #1e1e2f;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  border-left: 5px solid #8e44ad;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(142, 68, 173, 0.3);
+  background-color: #f7f0ff;
+}
+
+.skill-card img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.05);
+}
+
+.skill-card h4 {
+  margin-top: 12px;
+  color: #8e44ad;
+  font-weight: 600;
+}
+
+.description-text {
+  font-size: 1rem;
+  color: #333;
+  animation: fadeIn 0.5s ease-in;
+  margin-top: 10px;
+}
+
+.skill-card.animate-slide-left {
+  animation: slideLeft 1s ease forwards;
+}
+
+.skill-card.animate-slide-right {
+  animation: slideRight 1s ease forwards;
+}
+/* -------------------- PROJECTS SECTION -------------------- */
+/* --------- PROJECTS SECTION --------- */
+.projects-section {
+  background: linear-gradient(to right, #1e1e2f, #3c3c6b);
+  min-height: 100vh;
+  padding: 60px 0;
+  transition: background 0.4s ease;
+}
+
+.project-card {
+  background-color: #212529;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.02);
+}
+
+.project-card h4 {
+  font-weight: 600;
+  margin-top: 15px;
+  color: #ffc107;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Expanded Details Box */
+.project-details {
+  background: #ffffff;
+  border-left: 5px solid #0d6efd;
+  padding: 20px;
+  border-radius: 12px;
+  animation: slideIn 0.5s ease-out forwards;
+  transition: all 0.3s ease;
+}
+
+.project-details h5 {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Slide Nav Buttons */
+.project-details button {
+  transition: all 0.3s ease;
+}
+
+.project-details button:hover {
+  transform: scale(1.05);
+}
+
+/* View Project Button */
+.project-details a.btn-success {
+  background: linear-gradient(to right, #28a745, #218838);
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-details a.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade and Slide Animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.7s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+
+
+
+/* --------- EDUCATION SECTION --------- */
+.education-section {
+  padding: 60px 0;
+  background: linear-gradient(to bottom, #1f1f2e, #2c2c3e);
+  transition: all 0.4s ease;
+  min-height: 100vh;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #6c63ff;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: #0d6efd;
+  border-radius: 50%;
+  z-index: 1;
+  border: 3px solid #fff;
+}
+
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+.timeline-content {
+  background: #bfc1c5;
+  color: #1e1e2f;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  border-left: 5px solid #6c63ff;
+  
+}
+
+.timeline-item.left .timeline-content {
+  margin-left: auto;
+  background: #e0f7fa;
+  border-left: 5px solid #00bcd4;
+}
+
+.timeline-item.right .timeline-content {
+  margin-right: auto;
+  background: #e3f2fd;
+  border-left: 5px solid #2196f3;
+}
+
+.timeline-content h4 {
+  margin-bottom: 8px;
+  color: #6c63ff;
+  font-weight: bold;
+}
+
+.timeline-content h5 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.experience-text {
+  margin-top: 10px;
+  color: #555;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-in;
+}
+.timeline-content {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- TIMELINE ANIMATION & HOVER (ADD-ONLY) ---------- */
+
+/* Fade-in animation on scroll */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in from left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in from right */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.timeline-item.left {
+  animation: slideInLeft 1s ease forwards;
+  opacity: 0;
+}
+
+.timeline-item.right {
+  animation: slideInRight 1s ease forwards;
+  opacity: 0;
+}
+
+/* Add fade to content box */
+.timeline-content {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Hover effect for timeline boxes */
+.timeline-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Hover: Slight move + glow on hover */
+.timeline-content {
+  transition: all 0.4s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-left-width: 8px;
+}
+
+/* ---------- CERTIFICATES SECTION ---------- */
+/* ========== CERTIFICATES SECTION ========== */
+/* --------- CERTIFICATES SECTION --------- */
+/* App.css */
+.certificates-section{
+   background: linear-gradient(135deg, #45523b, #343a40);
+}
+.certificate-clickbox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-in-out;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* --------- CONTACT SECTION --------- */
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #7d6037, #343a40);
+  color: white;
+}
+
+.contact-icons li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icons li i {
+  color: #0dcaf0;
+}
+
+.contact-icons li a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-icons li:hover {
+  transform: translateX(8px);
+  color: #0dcaf0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 5px rgba(13, 202, 240, 0.8);
+  outline: none;
+}
+
+.btn.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.btn.hover-glow:hover {
+  background-color: #0dcaf0;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #0dcaf0;
+}
+
+/* Animation utilities */
+.animate-slide-left {
+  animation: slideInLeft 1s ease;
+}
+
+.animate-slide-right {
+  animation: slideInRight 1s ease;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --------- FOOTER (ONLY FOR HOME PAGE) --------- */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0dcaf0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background-color 0.3s;
+  z-index: 999;
+}
+.back-to-top:hover {
+  transform: scale(1.2);
+  background-color: #0bb4d4;
+}
+
